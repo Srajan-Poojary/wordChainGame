@@ -6,6 +6,7 @@ import Confetti from "react-confetti";
 import axios from "axios";
 import JSConfetti from "js-confetti";
 import ClipboardJS from "clipboard";
+import rightArrow from "../assets/right-arrow.png";
 
 const Game = () => {
   const clipboard = new ClipboardJS(".btn");
@@ -95,8 +96,8 @@ const Game = () => {
     }
   }, [verifiedWords]);
 
-  const handleWordCheck = async (e) => {
-    if (e.key === "Enter") {
+  const handleWordCheck = async (e, fromButtom = false) => {
+    if (e.key === "Enter" || fromButtom) {
       const newWord = inputValue.trim().toUpperCase();
       const currentlastLetter = newWord[newWord.length - 1];
 
@@ -353,15 +354,26 @@ const Game = () => {
             </p>
           )}
         </div>
-        <input
-          type="text"
-          className={styles.gameInput}
-          onChange={handleTextInput}
-          onKeyDown={handleWordCheck}
-          value={inputValue}
-          ref={inputRef}
-          autoComplete="off"
-        />
+        <div className={styles.inputWrapper}>
+          <input
+            type="text"
+            className={styles.gameInput}
+            onChange={handleTextInput}
+            onKeyDown={handleWordCheck}
+            value={inputValue}
+            ref={inputRef}
+            autoComplete="off"
+          />
+          <div className={styles.mobileEnterButton}>
+            <img
+              src={rightArrow}
+              alt="right arrow button"
+              onClick={(e) => {
+                handleWordCheck(e, true);
+              }}
+            />
+          </div>
+        </div>
 
         <div
           className={styles.wordsEnteredContainer}

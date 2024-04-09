@@ -3,6 +3,7 @@
   height: 500px;
   font-family: "Luckiest Guy", sans-serif;
   padding: 5px;
+  box-sizing: border-box;
 }
 
 .gameInfosWrapper {
@@ -60,13 +61,21 @@
     2px 2px 0 #000;
 }
 
+.inputWrapper {
+  position: relative;
+  width: max-content;
+  height: max-content;
+  margin-bottom: 30px;
+  height: 105px;
+}
+
 .gameInput {
   max-width: 861px;
   width: 861px;
-  height: 105px;
+  height: 100%;
   border-radius: 10px;
   outline: none;
-  margin-bottom: 30px;
+
   text-transform: uppercase;
   outline: 3px solid black;
   box-shadow: 10px 10px #005f8b;
@@ -74,6 +83,33 @@
   font-family: "Luckiest Guy";
   font-size: 45px;
   padding: 10px;
+}
+
+.mobileEnterButton {
+  height: 100%;
+  width: 100px;
+  background-color: yellow;
+  border-radius: 0px 10px 10px 0px;
+  border: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.mobileEnterButton img {
+  width: 60%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease-in-out;
+}
+
+.mobileEnterButton img:hover {
+  transform: scale(1.1); /* Increase the scale slightly on hover */
 }
 
 .wordsEnteredContainer {
@@ -222,6 +258,10 @@
 }
 
 @media screen and (max-width: 650px) {
+  .mobileEnterButton {
+    width: 60px;
+  }
+
   .gameWrapper {
     margin-top: 30px;
   }
@@ -238,11 +278,16 @@
     width: 100px;
   }
 
+  .inputWrapper {
+    height: 55px;
+  }
+
   .gameInput {
     max-width: 320px;
     width: 320px;
-    height: 55px;
+    height: 100%;
     font-size: 30px;
+    padding: 5px;
   }
 
   .wordsEnteredContainer {
