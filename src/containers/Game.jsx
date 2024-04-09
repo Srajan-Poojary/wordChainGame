@@ -267,7 +267,7 @@ const Game = () => {
   const handleShareScore = () => {
     const clipboard = new ClipboardJS(shareScoreBtnRef.current, {
       text: () =>
-        `I chained ${verifiedWords.length} word in ${totalTime} seconds on Word Chain! https://wordchain.app/`,
+        `I chained ${verifiedWords.length} word in ${totalTime} seconds on Word Chain! https://chainedwords.netlify.app/`,
     });
 
     clipboard.on("success", (e) => {
