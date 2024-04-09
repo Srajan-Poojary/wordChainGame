@@ -1,0 +1,303 @@
+.gameWrapper {
+  width: max-content;
+  height: 500px;
+  font-family: "Luckiest Guy", sans-serif;
+  padding: 5px;
+}
+
+.gameInfosWrapper {
+  max-width: 861px;
+  width: 861px;
+  height: 128px;
+  border-radius: 6px;
+  background-color: #0485c1;
+  border: 3px solid white;
+  box-shadow: 10px 10px #005f8b;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 100px;
+}
+
+.gameInfoContainer {
+  max-height: 128px;
+  width: 150px;
+  margin: 20px 0;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.infoHeader {
+  font-size: 30px;
+  color: #e7a05d;
+  width: max-content;
+  height: max-content;
+  margin: 0;
+  margin: auto 0;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.infoValue {
+  font-size: 35px;
+  color: white;
+  width: max-content;
+  height: max-content;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.seconds {
+  font-size: 24px;
+  margin-left: 3px;
+}
+
+.secondsValue {
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    2px 2px 0 #000;
+}
+
+.gameInput {
+  max-width: 861px;
+  width: 861px;
+  height: 105px;
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  outline: 3px solid black;
+  box-shadow: 10px 10px #005f8b;
+  border: none;
+  font-family: "Luckiest Guy";
+  font-size: 45px;
+  padding: 10px;
+}
+
+.wordsEnteredContainer {
+  max-width: 861px;
+  width: 861px;
+  height: max-content;
+  max-height: 80px;
+  overflow-x: scroll;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.acceptedWord {
+  font-size: 35px;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  padding: 10px;
+  border-radius: 5px;
+  color: #d8c655;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+
+.toastContainer {
+  width: max-content;
+  padding: 0 60px;
+  height: 63px;
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  margin: auto;
+  margin-bottom: 30px;
+  border: 1px solid black;
+}
+
+.toastContainer p {
+  font-family: "Nunito", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+  font-size: 25px;
+}
+
+.word {
+  position: absolute;
+  font-size: 80px;
+  color: red;
+  will-change: transform, opacity;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  font-family: "Luckiest Guy";
+}
+
+.errorToastWrapper {
+  display: none;
+}
+
+.errorToastContainer {
+  height: 50px;
+  width: max-content;
+  font-family: "Nunito", sans-serif;
+
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  margin: 0 auto;
+  border-radius: 4px;
+  background-color: #d4512b;
+  margin-bottom: 30px;
+}
+
+.errorToastContainer p {
+  font-size: 20px;
+  color: white;
+  font-weight: 400;
+}
+
+.gameEndWrapper {
+  display: none;
+}
+
+.gameEndContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.playAgainBtn,
+.shareMyScoreBtn {
+  width: 320px;
+  height: 70px;
+  border-radius: 10px;
+  font-size: 25px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+  box-shadow: 5px 5px #005f8b;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+.playAgainBtn {
+  background-color: white;
+}
+
+.shareMyScoreBtn {
+  background-color: #e7a05d;
+}
+
+.playAgainBtn:active,
+.shareMyScoreBtn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px #005f8b;
+}
+
+@media screen and (max-width: 900px) {
+  .gameInfosWrapper {
+    width: 600px;
+  }
+
+  .gameInput {
+    width: 600px;
+  }
+
+  .gameInputWrapper {
+    width: 600px;
+  }
+
+  .playAgainBtn {
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .shareMyScoreBtn {
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .gameWrapper {
+    margin-top: 30px;
+  }
+
+  .gameInfosWrapper {
+    display: flex;
+    width: 320px;
+    height: 80px;
+    margin-bottom: 50px;
+  }
+
+  .gameInfoContainer {
+    max-height: 128px;
+    width: 100px;
+  }
+
+  .gameInput {
+    max-width: 320px;
+    width: 320px;
+    height: 55px;
+    font-size: 30px;
+  }
+
+  .wordsEnteredContainer {
+    max-width: 320px;
+    width: 320px;
+    max-height: 100px;
+    overflow-x: scroll;
+  }
+
+  .infoHeader {
+    font-size: 14px;
+  }
+
+  .infoValue {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  .seconds {
+    font-size: 18px;
+  }
+
+  .gameInputWrapper {
+    width: 320px;
+  }
+
+  .toastContainer {
+    height: 40px;
+    padding: 0 20px;
+  }
+
+  .toastContainer p {
+    font-size: 18px;
+  }
+
+  .acceptedWord {
+    font-size: 25px;
+    padding: 5px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .word {
+    font-size: 40px;
+  }
+
+  .playAgainBtn {
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  .shareMyScoreBtn {
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+  }
+}

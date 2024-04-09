@@ -1,0 +1,30 @@
+.game-page-wrapper {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  background-color: #058ece;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid #fccb1d;
+}
+
+.game-secondary-wrapper {
+  border: 5px solid #e7a05d;
+  width: 100%;
+  height: 99%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .game-page-wrapper {
+    height: 100dvh;
+    align-items: start;
+  }
+
+  .game-secondary-wrapper {
+    align-items: start;
+  }
+}
